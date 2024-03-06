@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static',filename='/login.css')}}" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div>
+      <div class="loginbox">
+        <form class="innerlogin" action="{{url_for('login')}}" method="POST">
+          <label class="box" for="Email"> Email</label>
+          <div class="inputgroup">
+            <input
+              class="box"
+              type="email"
+              name="email"
+              id=""
+              placeholder="Email"
+              value="{{ request.form['email']}}"
+            />
+          </div>
+          <label class="box" for="password"> Password</label>
+          <div>
+            <input
+              class="inputgroup"
+              class=""
+              type="password"
+              name="password"
+              id=""
+              placeholder="Password"
+              value="{{ request.form['password'] }}"
+            />
+          </div>
+
+          <input
+            action="{{url_for('main')}}"
+            class="submitbtn"
+            type="submit"
+            value="Login"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

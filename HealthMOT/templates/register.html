@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='/register.css')}}"
+    />
+    <title>Register</title>
+  </head>
+  <body>
+    <div>
+      <div class="loginbox">
+        <form class="innerlogin" action="{{url_for('register')}}" method="POST">
+            
+          <label class="box" for="fname"> First Name</label>
+          <div class="inputgroup">
+            <input
+              class="box"
+              type="fname"
+              name="fname"
+              id=""
+              placeholder="First Name"
+              value="{{ request.form['fname']}}"
+            />
+          </div>
+          <label class="box" for="Lname"> Last Name</label>
+          <div  class="inputgroup">
+            <input
+            
+              class="box"
+              type="Lname"
+              name="Lname"
+             
+              placeholder="Last Name"
+              value="{{ request.form['Lname'] }}"
+            />
+          </div>
+          <label class="box" for="email">Email</label>
+          <div class="inputgroup">
+            <input
+             
+              class="box"
+              type="email"
+              name="email"
+              
+              placeholder="email"
+              value="{{ request.form['email'] }}"
+            />
+            <label class="box" for="Password">Password</label>
+            <div class="inputgroup">
+              <input
+               
+                class="box"
+                type="password"
+                name="password"
+                
+                placeholder="password"
+                value="{{ request.form['password'] }}"
+              />
+          </div>
+
+          <input class="submitbtn" type="submit" value="Sign Up" />
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+        <ul class=flashes>
+                {% for message in messages %}
+        <p>{{ message }}</p> 
+        
+         {% endfor %}
+        </form>
+    </div>
+      </div>
+      
+   
+    {% endif %}
+    {% endwith %}
+    {% block body %}{% endblock %}
+  </body>
+</html>

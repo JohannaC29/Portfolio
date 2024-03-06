@@ -1,0 +1,70 @@
+*{
+    margin: auto;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+
+div{
+    margin: auto;
+}
+
+.loginbox{
+    text-align: center;
+    margin-top: 10pc;
+    background-color: rgba(255, 255, 255, 0.6) ;
+    width: 500px;
+    height:450px ;
+    border-radius: 20px;
+    box-shadow: 0px 15px 40px  gray;
+    
+}
+.innerlogin{
+    height: 50%;
+    display: flexbox;
+    padding: 5pc;
+    margin:5pc;
+  
+
+}
+.box{
+    align-items:center;
+    text-align: center;
+    margin:5px;
+    margin-top:20px;
+    margin-right:;
+    font-size:20px;
+    width: 300px;
+    height: 30px;
+
+}
+
+
+.submitbtn{
+    background-color: black;
+    color: white;
+    width: 15pc;
+    height: 40px;
+    margin-top: 5pc;
+}
+.inputgroup{
+position: relative;
+margin: 20px 0x;
+}
+
+.inputgroup label{
+    position: absolute;
+    top: 50px;
+    left:5px;
+    transform: translateY(-50%);
+    font-size:16px;
+    color: white;
+    padding:0 5px;
+    pointer-events;
+}
+body{
+    background-image:url("registerback1.png");
+    background-repeat: none;
+     background-size: 150pc 70pc;
+    width: 100pc
+  ;
+}

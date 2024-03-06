@@ -1,0 +1,54 @@
+*{
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+
+}
+
+h1{
+ text-align: center;
+    
+}
+
+
+.div1{
+ margin-left: 10px;
+  background-color: aquamarine; 
+  width: 100px;
+  height: 200px;  
+}
+
+.button{ 
+    
+    align-items: center;
+    width: 15pc;
+    height: 2pc;
+    margin-block-start: auto;
+    margin-left: 60pc;
+    text-align: center;
+    background-color: rgb(216, 159, 73);
+    animation-delay: 2s;
+}
+a{
+   text-decoration: none;
+}
+
+.button:hover {
+    
+    background-color: rgb(80, 80, 90);
+     
+
+};
+
+
+.image{
+    width: 10px;
+    height: 10px;
+}
+
+.fppicture{
+    background-image:url("frontpage.jpg");
+    background-size: 600px 600px;
+    width: 600px;
+    height: 600px;
+    margin-left: 15pc;
+}

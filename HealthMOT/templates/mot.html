@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOT Booking</title>
+  </head>
+  <body>
+
+    <div>
+        <div class="MOTDetails">
+          <form class="innerlogin" action="{{url_for('mot')}}" method="POST">
+            <h1>Booking Details</h1>
+            <label class="Mdetails" for="Email"> Full name</label>
+            <div class="inputgroup">
+              <input
+                class="Mdetails"
+                type="fullname"
+                name="fullname"
+                id=""
+                placeholder="Full Name"
+                value="{{ request.form['fullname']}}"
+              />
+            </div>
+            <label class="Mdetails" for="address">Address</label>
+            <div>
+              <input
+                class="inputgroup"
+                class=""
+                type="address"
+                name="address"
+                id=""
+                placeholder="address"
+                value="{{ request.form['address'] }}"
+              />
+            </div>
+            <label class="Mdetails" for="postcode"> Postcode</label>
+            <div>
+              <input
+                class="inputgroup"
+                class=""
+                type="postcode"
+                name="postcode"
+                id=""
+                placeholder="Postcode"
+                value="{{ request.form['postcode'] }}"
+              />
+            </div>
+            <label class="Mdetails" for="contactNumber">Mobile Number</label>
+            <div>
+              <input
+                class="inputgroup"
+                class=""
+                type="number"
+                name="mobile"
+                id=""
+                placeholder="+44"
+                value="{{ request.form['mobile'] }}"
+              />
+            </div>
+            <label class="Mdetails" for="email"> Email</label>
+            <div>
+              <input
+                class="inputgroup"
+                class=""
+                type="email"
+                name="email"
+                id=""
+                placeholder="Email"
+                value="{{ request.form['email'] }}"
+              />
+              
+              <br><br>
+               <label class="Mdetails" for="additional"> Additional Infomation </label>
+               
+             <textarea  type="additional" rows="4" cols="50" name="additional"  value="{{request.form['additional']}}" >
+             additional information...   </textarea>
+            </div>
+  
+            <input
+              action="{{url_for('mot')}}"
+              class="submitbtn"
+              type="submit"
+              value="submit"
+            />
+          </form>
+          <!-- Google Calendar Appointment Scheduling begin -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+
+    
+(function() {
+  var target = document.currentScript;
+  window.addEventListener('load', function() {
+    calendar.schedulingButton.load({
+      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2SSYHNNDw7fYDs_6RcERgTNRHltKp-MTCJX3E86M5JVtthqXGIc_vbWBh20woZ7XTtbZ306I2b?gv=true',
+      color: '#F09300',
+      label: 'Book an appointment',
+      target,
+    });
+  });
+})();
+</script>
+<!-- end Google Calendar Appointment Scheduling -->
+
+         
+
+<!-- end Google Calendar Appointment Scheduling -->
+    <!--  1)create a booking table with  slots that have avalibility
+        2)  create a database where people  ive there details table name = GP booking
+    
+    columns booking id,  date, time,  full name, email,  dr aditionalInfo
+     3) send confirmation email to user of booking-->
+  </body>
+</html>
